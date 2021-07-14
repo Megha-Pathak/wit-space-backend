@@ -1,0 +1,65 @@
+type Opportunites @model @key(fields: ["userId", "createdAt"]) {
+  userId: ID!
+  opportunityUrl: String!
+  opportunityName: String!
+  userName: String!
+  createdAt: AWSDateTime!
+  opportunityType: Int!
+}
+
+type DevCare @model @key(fields: ["userId", "createdAt"]) {
+  userId: ID!
+  imageUrl: String!
+  userName: String!
+  description: String!
+  createdAt: AWSDateTime!
+}
+
+type Ideas @model @key(fields: ["userId", "createdAt"]) {
+  userId: ID!
+  ideaTitle: String!
+  userName: String!
+  ideaDescription: String!
+  createdAt: AWSDateTime!
+  ideaId: ID!
+  isAnoymous: Boolean!
+  comments: [IdeaComments] @connection(fields: ["ideaId"])
+}
+
+type Projects @model @key(fields: ["userId", "createdAt"]) {
+  userId: ID!
+  projectsTitle: String!
+  projectsUrl: String!
+  userName: String!
+  description: String!
+  createdAt: AWSDateTime!
+  projectId: ID!
+  feedbacks: [ProjectFeedbacks] @connection(fields: ["projectId"])
+}
+
+type ProjectFeedbacks @model @key(fields: ["projectId", "createdAt"]) {
+  userId: ID!
+  projectFeedback: String!
+  userName: String!
+  createdAt: AWSDateTime!
+  projectId: ID!
+  feedbackType: Int!
+}
+
+type IdeaComments @model @key(fields: ["ideaId", "createdAt"]) {
+  userId: ID!
+  ideaComment: String!
+  userName: String!
+  createdAt: AWSDateTime!
+  ideaId: ID!
+}
+
+type Resources @model @key(fields: ["resourceId", "createdAt"]) {
+  userId: ID!
+  resourceUrl: String!
+  userName: String!
+  resourceDescription: String!
+  createdAt: AWSDateTime!
+  resourceType: Int!
+  resourceId: ID!
+}
