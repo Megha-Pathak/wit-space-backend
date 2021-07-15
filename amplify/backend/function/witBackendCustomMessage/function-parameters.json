@@ -1,0 +1,26 @@
+{
+  "trigger": true,
+  "modules": [
+    "verification-link"
+  ],
+  "parentResource": "witBackend",
+  "functionName": "witBackendCustomMessage",
+  "resourceName": "witBackendCustomMessage",
+  "parentStack": "auth",
+  "triggerEnvs": [
+    {
+      "key": "RESOURCENAME",
+      "value": "resourceName"
+    }
+  ],
+  "triggerDir": "/usr/local/lib/node_modules/@aws-amplify/cli/node_modules/amplify-category-auth/provider-utils/awscloudformation/triggers/CustomMessage",
+  "triggerTemplate": "CustomMessage.json.ejs",
+  "triggerEventPath": "CustomMessage.event.json",
+  "roleName": "witBackendCustomMessage",
+  "skipEdit": true,
+  "REDIRECTURL": "https://notes-yard.smilegupta.tech/",
+  "EMAILSUBJECT": "[WIT] Verify your email address",
+  "EMAILMESSAGE": "Please click on this link to verify your email address - ",
+  "RESOURCENAME": "resourceName",
+  "enableCors": false
+}

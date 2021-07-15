@@ -1,0 +1,29 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-witbackend-dev-201521-authRole",
+      "UnauthRoleArn": "arn:aws:iam::318066470757:role/amplify-witbackend-dev-201521-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::318066470757:role/amplify-witbackend-dev-201521-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-witbackend-dev-201521-deployment",
+      "UnauthRoleName": "amplify-witbackend-dev-201521-unauthRole",
+      "StackName": "amplify-witbackend-dev-201521",
+      "StackId": "arn:aws:cloudformation:us-east-1:318066470757:stack/amplify-witbackend-dev-201521/20b645a0-e4b2-11eb-8f75-0e2d599e16c7",
+      "AmplifyAppId": "d1s90ccsuk5q1r"
+    },
+    "categories": {
+      "function": {
+        "witBackendCustomMessage": {
+          "REDIRECTURL": "https://notes-yard.smilegupta.tech/",
+          "EMAILSUBJECT": "[WIT] Verify your email address",
+          "EMAILMESSAGE": "Please click on this link to verify your email address - ",
+          "deploymentBucketName": "amplify-witbackend-dev-201521-deployment",
+          "s3Key": "amplify-builds/witBackendCustomMessage-626d3266616a6e2f7355-build.zip"
+        }
+      },
+      "auth": {
+        "witBackend": {}
+      }
+    }
+  }
+}
